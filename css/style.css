@@ -406,6 +406,10 @@ padding-bottom: 27px;
     background-size: cover;
     position: relative;
 }
+.wrap_bromo_text_1{
+    width: 100px;
+    margin: 0 auto;
+}
 .bromo_text1{ 
     font-family: Open Sans;
     font-style: normal;
@@ -418,19 +422,22 @@ padding-bottom: 27px;
 .bromo_text1::before{
     content: "";
     display: block;
+    top:0;
+    left: 0;
     max-width: 92px;
-    height: 1px;
+    height: 2px;
     background-color: #FFC178;
-    transform: translate(584px,13px);
+    transform: translate(-100px,14px);
+    
     
 }
 .bromo_text1::after{
     content: "";
     display: block;
     max-width: 92px;
-    height: 1px;
+    height: 2px;
     background-color: #FFC178;
-    transform: translate(782px,-13px);
+    transform: translate(100px,-14px);
     
 }
 .bromo_text{
@@ -438,6 +445,7 @@ padding-bottom: 27px;
     text-align: center;
     padding-top: 37%;
     background-image: url(/img/filter_3.png);
+    background-size: cover;
     background-position:  bottom;
     background-repeat: no-repeat;
 }

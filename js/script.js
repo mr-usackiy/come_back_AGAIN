@@ -14,6 +14,10 @@ $(document).ready(function(){
             });
         });
 
+
+        $('.red_more').click(function(){
+            $('.content_wrap-2').css('background-image', 'url(/img/bromo_2.jpg)');
+        });
 })
 
 
