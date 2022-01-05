@@ -1,12 +1,18 @@
 
 $(document).ready(function () {
+    
+
+
+    //анмация при нажании 
     $('.nav_search_text').click(function () {
-        $('.popup_search').toggleClass('visible');
+        $('.popup_search').toggleClass('visible');//поиск
     })
 
+    $('.red_more').click(function () {
+            $('.content_wrap-2').css('background-image', 'url(/img/bromo_2.jpg)');// бэкграунд картинка на Бромо
+        });
 
-
-
+    //анимация ПАРОЛАКС
     $(window).scroll(function () {
         var st = $(this).scrollTop();
         $('.intro_content').css({
@@ -15,14 +21,25 @@ $(document).ready(function () {
     });
 
 
-    $('.red_more').click(function () {
-        $('.content_wrap-2').css('background-image', 'url(/img/bromo_2.jpg)');
-    });
+   
 
-
+//анимация при скроллинеге 
 
     const down = document.querySelector('.down');
     const header_nav = document.querySelector('.header_nav');
+    const scrollWrapper = document.querySelectorAll('.content_wrap');
+
+    const scrollwraps = () =>{
+        let windowCenter = (window.innerHeight /2) + window.scrollY;
+        scrollWrapper.forEach(el=>{
+            let scrollOffset = el.offsetTop + el.offsetHeight /10;
+            if (windowCenter >= scrollOffset){
+                el.classList.add('wrap_animation');
+            }else { 
+                el.classList.remove ('wrap_animation');
+            }
+        })
+    }
 
 
     const headerFixed = () => {
@@ -42,8 +59,10 @@ $(document).ready(function () {
     };
 
 headerFixed();
+scrollwraps();
 window.addEventListener('scroll', () => {
     headerFixed();
+    scrollwraps();
 });
 })
 
