@@ -2,6 +2,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
   margin: 0;
@@ -20,6 +24,10 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.but {
+  display: none;
 }
 
 .header_nav {
@@ -144,6 +152,26 @@ body {
   width: 275px;
   -webkit-transition: 1.2s;
   transition: 1.2s;
+}
+
+.burger_menu {
+  z-index: 99999;
+  background: rgba(53, 41, 41, 0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 15px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid;
+  border-color: #a85454;
+  color: #000;
+  font-size: 14px;
+  visibility: hidden;
 }
 
 .visible {
@@ -401,6 +429,44 @@ body {
   color: white;
 }
 
+.icon_down {
+  margin-top: 50px;
+  padding-left: 44%;
+  opacity: 70%;
+  -webkit-animation-name: icon_down;
+          animation-name: icon_down;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+
+@-webkit-keyframes icon_down {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes icon_down {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .down {
   background-image: url(/img/filter_2.png);
   background-size: cover;
@@ -428,11 +494,6 @@ body {
           transform: scale(0);
 }
 
-.content_wrap_3{
-  min-width: 80%;
-  max-width: 1461px;
-  margin: 0 auto;
-}
 .ENT {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,18 +501,23 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
 }
 
+.wrap_animation {
+  visibility: visible;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
 
 .img1 {
   width: 35%;
 }
 
 .ENT_text {
+  max-width: 48%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,12 +687,19 @@ body {
 }
 
 .content_3 {
-  padding-top:100px;
+  padding-top: 50px;
   width: 100%;
   height: 100%;
   background-color: black;
+}
 
-
+.content_wrap_3 {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 footer {
@@ -864,12 +937,12 @@ footer {
   }
   .container {
     width: auto;
+  }
+  .container_wrap {
+    padding: 0px 0px;
     background-image: url(/img/itro_bg_mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  .container_wrap {
-    padding: 0px 10px;
   }
   .bg {
     display: none;
@@ -879,6 +952,7 @@ footer {
   }
   .intro_content {
     width: auto;
+    margin-left: 10px;
   }
   .intro_preview_2 .text_1 {
     font-size: 16px;
@@ -892,11 +966,18 @@ footer {
     font-size: 75px;
     line-height: 30px;
     padding-bottom: 35px;
+    color: #000000;
   }
   .intro_preview_2 .text_3 {
     font-size: 74px;
-    line-height: 61px;
+    line-height: 75px;
     font-weight: bold;
+    color: #000000;
+  }
+  .content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: auto;
   }
   .intro_preview_1 {
     display: none;
@@ -904,9 +985,107 @@ footer {
   .down {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+    height: 462px;
+    padding-top: 0;
   }
   .intro_preview_2 {
     padding-left: 0px;
     margin: 0 auto;
+  }
+  .ENT {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+    margin-left: 15px;
+    margin-bottom: 220px;
+  }
+  .ENT img {
+    display: none;
+  }
+  .ENT .ENT_text {
+    max-width: 96%;
+  }
+  .ENT .ENT_text2 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .content-2 {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .content-2 .content_wrap-2 {
+    background-image: url(/img/bromo_mobile.jpg);
+  }
+  .content_3 .content_wrap_3 h1 {
+    font-size: 47px;
+    line-height: 65px;
+  }
+  .content_3 .content_wrap_3 .ENT {
+    margin-top: 222px;
+  }
+  .header_nav {
+    display: none;
+  }
+  .but {
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+    z-index: 9;
+    opacity: 70%;
+  }
+  .burger_menu {
+    position: relative;
+    z-index: 99999;
+    background: rgba(53, 41, 41, 0);
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border: 1px solid;
+    border-color: #a85454;
+    color: #000;
+    font-size: 14px;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    visibility: hidden;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 65px;
+    color: #FFD1A0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    visibility: visible;
+  }
+  .close {
+    position: absolute;
+    font-family: serif;
+    font-size: 20px;
+    top: 20px;
+    right: 20px;
   }
 }
