@@ -1,5 +1,10 @@
 * {
   text-decoration: none;
+  outline: none;
+}
+
+a:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -439,6 +444,7 @@ body {
           animation-delay: 0s;
   -webkit-animation-duration: 2.5s;
           animation-duration: 2.5s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @-webkit-keyframes icon_down {

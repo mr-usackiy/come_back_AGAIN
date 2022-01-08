@@ -1,7 +1,11 @@
 
 *{
     text-decoration: none;
+    outline: none;
 }
+a:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 html {
     scroll-behavior: smooth;
   }
@@ -330,6 +334,7 @@ color: #FFFFFF;
     animation-name: icon_down;
     animation-delay:0s;
     animation-duration: 2.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 } 
 @keyframes icon_down {
     0% {
