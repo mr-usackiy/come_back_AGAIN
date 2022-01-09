@@ -1,6 +1,7 @@
 * {
   text-decoration: none;
   outline: none;
+  overflow: hidden;
 }
 
 a:active {
