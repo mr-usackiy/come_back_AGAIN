@@ -1,7 +1,7 @@
 * {
   text-decoration: none;
   outline: none;
-  overflow: hidden;
+  overflow: auto;
 }
 
 a:active {
@@ -17,10 +17,12 @@ body {
   margin: 0;
   padding: 0;
   zoom: 90%;
+  overflow: auto;
 }
 
 .wrapper {
   max-width: 1397px;
+  overflow: hidden;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
