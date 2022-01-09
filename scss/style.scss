@@ -328,6 +328,7 @@ color: #FFFFFF;
 }
 
 .icon_down{
+    visibility: hidden;
     margin-top: 50px;
     padding-left: 44%;
     opacity: 70%;
@@ -972,9 +973,9 @@ footer{
     }
 
 
-
-
-
+    .icon_down{
+        visibility: visible;
+    }
 
 
 
@@ -1055,6 +1056,56 @@ footer{
         font-size: 20px;
         top:20px;
         right: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    footer{
+        padding: 0;
+    }
+    .footer_content{
+        margin: 0px 10px;
+    }
+    .qwery_top {
+        padding-bottom: 7px;
+    }
+    .adress{
+        font-size: 21px;
+        padding: 21px 0px 0px 22px;
+    }
+    .button_2{
+        margin-top: 2px;
+    }
+    .catalog_right{
+        display: none;
+    }
+    .footer_down{
+        padding: 55px 0px 99px 0px;
+    }
+    .footer_down_left{
+        align-items: center;
+    }
+    .ftl_1{
+        padding-left: 5px;
+    }
+    .icon2{
+        padding-left: 0; 
+        margin-right: 23px;
+    }
+    .down1 {
+        text-align: center;
+        color: #ffffff;
+        font-family: 'Open Sans';
     }
 }
 
