@@ -30,12 +30,12 @@ body{
 }
 .header_nav{
     transform: translateY(8px);
-    max-width: 1500px;
+    max-width: 98%;
     margin: 0 auto;   
     filter: drop-shadow(0px 10px 10px #0000008c);
 }
 .header_nav_content{
-    max-width: 1397px;
+    max-width: 95%;
     margin: 0 auto;
     padding: 6px 0px 0px 0px;
     display: flex;
@@ -189,23 +189,31 @@ color: #FFFFFF;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
+.icon_wrap {
+    transform: rotate(90deg);
+    img{
+        margin-left: 10px;
+    }
+}
+.intro_preview_1 .text_0{
+    transform: rotate(90deg);
+    margin-bottom: 65px;
+}
 .intro_preview_1{
-    width: 190px;
-    transform: translate(0px, 0px) rotate(90deg);
-    transform-origin: 120px 122px 0px;
+    margin-bottom: 157px;
+    width: auto;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: rgb(50, 68, 68);
-     justify-content: space-around;
-    align-content: space-between;
     color: white;
-    }
-    .intro_preview_1{
-        animation-delay:0s;
-        animation-name: move4;
-        animation-duration: 4s;
-        filter: drop-shadow(10px -10px 300px rgba(0, 0, 0, 0.582));
-    }
+    animation-delay:0s;
+    animation-name: move4;
+    animation-duration: 4s;
+    filter: drop-shadow(10px -10px 300px rgba(0, 0, 0, 0.582));
+}
     
     @keyframes move4 {
         0% {
