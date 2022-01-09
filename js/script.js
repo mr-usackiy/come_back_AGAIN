@@ -17,12 +17,12 @@ $(document).ready(function () {
     })
 
     //анимация ПАРОЛАКС
-    //$(window).scroll(function () {
-    //    var st = $(this).scrollTop();
-    //    $('.intro_content').css({
-   //         "transform": "translate(0%, -" + st / 6 + "%"
-   //     });
-   // });
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        $('.intro_content').css({
+            "transform": "translate(0%, -" + st / 6 + "%"
+        });
+    });
 
 
 
