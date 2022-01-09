@@ -2,7 +2,7 @@
 *{
     text-decoration: none;
     outline: none;
-    overflow: auto;
+    
 }
 a:active {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -15,7 +15,6 @@ body{
     margin: 0;
     padding: 0;
     zoom: 90%;
-    overflow: auto;
 }
 .wrapper{
     max-width: 1397px;
@@ -181,6 +180,7 @@ color: #FFFFFF;
 
 .intro{
     padding-top: 198px;
+    overflow:hidden;
 }
 .intro_content{
     max-width: 1397px;
